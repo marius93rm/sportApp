@@ -1,25 +1,42 @@
 import { StatusBar } from 'expo-status-bar';
+
+import { NavigationContainer } from '@react-navigation/native';
+// npm install @react-navigation/native
+// npx expo install react-native-screens react-native-safe-area-context
+
+import { createStackNavigator } from '@react-navigation/stack';
+//npm install @react-navigation/native-stack
+
+
 import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <ImageBackground source={require('./assets/background.jpg')} style={styles.image}>
+    <NavigationContainer>
 
-        <View style={styles.sopra} >
-          <Text style={styles.header}>Benvenuto</Text>
-          <TextInput style={styles.input} placeholder="Inserisci nome" />
-        </View>
 
-        <View style={styles.sotto} >
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.label}> Cliccami </Text>
-          </TouchableOpacity>
-        </View>
+    </NavigationContainer>
 
-      </ImageBackground>
-      <StatusBar style="auto" />
-    </View>
+
+
+
+    // <View style={styles.container}>
+    //   <ImageBackground source={require('./assets/background.jpg')} style={styles.image}>
+
+    //     <View style={styles.sopra} >
+    //       <Text style={styles.header}>Benvenuto</Text>
+    //       <TextInput style={styles.input} placeholder="Inserisci nome" />
+    //     </View>
+
+    //     <View style={styles.sotto} >
+    //       <TouchableOpacity style={styles.button}>
+    //         <Text style={styles.label}> Cliccami </Text>
+    //       </TouchableOpacity>
+    //     </View>
+
+    //   </ImageBackground>
+    //   <StatusBar style="auto" />
+    // </View>
   );
 }
 
