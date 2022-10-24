@@ -54,5 +54,26 @@ const styles = StyleSheet.create({
         padding: 20,
         marginTop: 30,
     },
+    body: {
+        flex: 1,
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: 20,
+    },
+    top: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    center: {
+        flex: 3,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    bottom: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
 });
 
