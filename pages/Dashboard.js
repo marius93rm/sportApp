@@ -20,14 +20,19 @@ export default function Dashboard({ route, navigation }) {
         navigation.navigate('Pushups', { username: username });
     }
 
+    //back
+    /* 
+    <TouchableOpacity onPress={() => navigation.pop()}>
+        <MaterialIcons name="chevron-left" size={30} color="#161F3D" />
+    </TouchableOpacity>
+    */
+
     return (
         <View>
             <View style={styles.header}>
                 <View style={styles.back}>
-                    <TouchableOpacity onPress={() => navigation.pop()}>
-                        <MaterialIcons name="chevron-left" size={24} color="#161F3D" />
-                    </TouchableOpacity>
-                    <Text style={styles.ciao}>Hello, {username}</Text>
+                    <Text style={styles.ciao}>Hello, </Text>
+                    <Text style={styles.username}>{username}</Text>
                 </View>
                 <Avatar />
             </View>
@@ -35,7 +40,7 @@ export default function Dashboard({ route, navigation }) {
             <View style={styles.body}>
                 <Progress />
                 <Text style={styles.title}>Sport exercises</Text>
-                
+
                 <TouchableOpacity style={styles.button} onPress={() => { navigation.push("Run") }}>
                     <Card attivita="Run" source={require('../assets/images/runButton.jpg')} />
                 </TouchableOpacity>
@@ -60,7 +65,10 @@ const styles = StyleSheet.create({
         marginTop: 50,
     },
     ciao: {
-        fontSize: 20,
+        fontSize: 30,
+    },
+    username: {
+        fontSize: 30,
         fontWeight: 'bold',
     },
     back: {
