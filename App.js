@@ -4,11 +4,13 @@ import { NavigationContainer } from '@react-navigation/native';
 // npm install @react-navigation/native
 // npx expo install react-native-screens react-native-safe-area-context
 
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //npm install @react-navigation/native-stack
 
 
 import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity } from 'react-native';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
