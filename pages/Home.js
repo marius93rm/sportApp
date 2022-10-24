@@ -1,19 +1,24 @@
 import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
 
+export default function Home({ navigation }) {
+    const [username, setUsername] = useState('');
 
-export default function Home({navigation}) {
     return (
         <View style={styles.container}>
             <ImageBackground source={require('../assets/images/background.jpg')} style={styles.image}>
 
                 <View style={styles.sopra} >
                     <Text style={styles.header}>Benvenuto</Text>
-                    <TextInput style={styles.input} placeholder="Inserisci nome" />
+                    
+                    <TextInput style={styles.input} placeholder="Inserisci nome" onChangeText={(username) => { setUsername(username) }} defaultValue={username}/>
+                    {/* <Text style={styles.debug}>TEST: {username}</Text> */}
+                
                 </View>
 
                 <View style={styles.sotto} >
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.label}> Cliccami </Text>
+                    <TouchableOpacity style={styles.button} onPress={()=>{navigation.navigate("Dashboard", {username: username})}}>
+                        <Text style={styles.label}> Iniziamo </Text>
                     </TouchableOpacity>
                 </View>
 
@@ -26,7 +31,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-
     sopra: {
         flex: 5,
         backgroundColor: 'rgba(0,0,0,0.5)',
