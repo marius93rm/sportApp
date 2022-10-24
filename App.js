@@ -10,7 +10,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity } from 'react-native';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
